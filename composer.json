@@ -1,0 +1,51 @@
+{
+    "name": "vehikl/laravel-flip",
+    "type": "library",
+    "description": "A Feature Flag implementation for Laravel",
+    "keywords": [
+        "vehikl",
+        "laravel-flip",
+        "feature flags"
+    ],
+    "homepage": "https://github.com/vehikl/laravel-flip",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Colin DeCarlo",
+            "email": "c.decarlo@vehikl.com",
+            "homepage": "https://github.com/colindecarlo",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.1",
+        "vehikl/flip": "^0.2.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^7.0",
+        "squizlabs/php_codesniffer": "^3.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "Vehikl\\LaravelFlip\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Vehikl\\LaravelFlip\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "phpunit",
+        "check-style": "phpcs -p --standard=PSR2 --runtime-set ignore_errors_on_exit 1 --runtime-set ignore_warnings_on_exit 1 src tests",
+        "fix-style": "phpcbf -p --standard=PSR2 --runtime-set ignore_errors_on_exit 1 --runtime-set ignore_warnings_on_exit 1 src tests"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    }
+}
